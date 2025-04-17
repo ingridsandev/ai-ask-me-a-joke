@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-west-2"  # Change to your desired AWS region
 }
 
-resource "aws_ecr_repository" "lambda_repository" {
+data "aws_ecr_repository" "lambda_repository" {
   name = "ai-ask-me-a-joke"
 }
 
