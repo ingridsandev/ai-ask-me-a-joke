@@ -56,7 +56,7 @@ jobs:
 
       - name: Create ECR Repository if not exists
         run: |
-          aws ecr describe-repositories --repository-names ai-ask-me-a-joke --region us-west-2 || \
+          aws ecr describe-repositories --repository-names ai-ask-me-a-joke --region us-west-2 2>/dev/null || \
           aws ecr create-repository --repository-name ai-ask-me-a-joke --region us-west-2
 
       - name: Push Docker Image to ECR
