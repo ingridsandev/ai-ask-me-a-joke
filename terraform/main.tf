@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"  # Change to your desired AWS region
+  region = "eu-west-1"  # Change to your desired AWS region
 }
 
 data "aws_ecr_repository" "lambda_repository" {
