@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "ingridsandev-ai-projects"   
+    bucket         = "ingridsandev-terraform-projects"   
     key            = "terraform/state"           
-    region         = "us-east-1"                 
+    region         = "eu-west-1"                 
     dynamodb_table = "terraform-lock"           
     encrypt        = true                       
   }
