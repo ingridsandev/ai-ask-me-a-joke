@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-1"  # Change to your desired AWS region
+  region = "eu-west-1" 
 }
 
 data "aws_ecr_repository" "lambda_repository" {
@@ -17,7 +17,6 @@ resource "aws_lambda_function" "ai-ask-me-a-joke-lambda" {
     }
   }
 
-  # IAM role for Lambda execution (optional if you're attaching this in a different way)
   role = aws_iam_role.lambda_exec_role.arn
 }
 
