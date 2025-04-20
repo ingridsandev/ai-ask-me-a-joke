@@ -2,7 +2,7 @@ provider "aws" {
   region = "eu-west-1" 
 }
 
-data "aws_ecr_repository" "lambda_repository" {
+resource "aws_ecr_repository" "lambda_repository" {
   name = "ai-ask-me-a-joke"
 }
 

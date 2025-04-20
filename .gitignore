@@ -1,2 +1,15 @@
 .vscode
 src/__pycache__/*
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform crash logs
+crash.log
+
+# Ignore local Terraform directories
+.terraform/
+
+# Ignore sensitive files (if any)
+*.tfvars
