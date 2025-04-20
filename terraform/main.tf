@@ -6,6 +6,12 @@ resource "aws_ecr_repository" "lambda_repository" {
   name = "ai-ask-me-a-joke"
 }
 
+variable "ANTHROPIC_API_KEY" {
+  description = "API key for Anthropic"
+  type        = string
+  sensitive   = true
+}
+
 resource "aws_lambda_function" "ai-ask-me-a-joke-lambda" {
   function_name = "ai-ask-me-a-joke-lambda"
   package_type  = "Image"
@@ -13,7 +19,7 @@ resource "aws_lambda_function" "ai-ask-me-a-joke-lambda" {
 
   environment {
     variables = {
-      ANTHROPIC_API_KEY = env.ANTHROPIC_API_KEY
+      ANTHROPIC_API_KEY = var.ANTHROPIC_API_KEY
     }
   }
 
